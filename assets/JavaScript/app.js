@@ -19,8 +19,9 @@ $(document).on("click", "#topic", function() {
     }).then(function (result) {
         //append 10 static non-animated gif images to the page by...
         for (var i = 0; i < 10; i++) {
-        //...creating an iframe
-        var image = $("<iframe>").attr("src", result.data[i].embed_url)
+        //...creating an image
+        var imgSource = result.data[i].images["fixed_width_still"].url
+        var image = $("<img>").attr({"src" : imgSource})
         //...appending to the page
         $("#results").append(image);
         }
