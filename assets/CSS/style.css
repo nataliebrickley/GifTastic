@@ -1,3 +1,36 @@
+body{
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/pVbDXN6/videoblocks-curtain-red-silk-loop-background-4k-seamlessly-looped_rhkhgl_uf_thumbnail-full01.png");
+    color: white;
+}
+h1{
+    font-size: 64px;
+    font-family: 'Lobster', cursive;
+}
+#form, #buttons {
+    text-align: center;
+}
+#form {
+    margin: 10px;
+}
+#title {
+    margin: 20px;
+    color:white;
+}
+#topic {
+    margin: 10px;
+    border-radius: 10%;
+    border: none;
+    background: white;
+    font-size: 16px;
+    padding: 10px;
+}
 .gif {
     display: inline-block;
+    margin: 10px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+}
+p{
+    font-size: 24px;
 }

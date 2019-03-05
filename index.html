@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GifTastic</title>
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
     <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
     <div class="container">
+        <!--Title-->
+        <div class="row">
+            <div class="col-md-12 text-center" id="title">
+                <h1>GifTastic</h1>
+            </div>
+        </div>
         <!--Topics-->
         <div class="row">
             <div class="col-md-12" id="buttons"></div>
         </div>
         <!--Search for a topic-->
-        <form>
-            <p>Search for new gifs: </p>
-            <input type="text" name="search-gifs" id="search-gifs">
-            <input type="submit" value="Submit" id="add-gif">
-        </form>
+        <div class="row">
+            <div class="col-md-12" id="form">
+                <form>
+                    <p>Search for new gifs: </p>
+                    <input type="text" name="search-gifs" id="search-gifs">
+                    <input type="submit" value="Submit" id="add-gif">
+                </form>
+            </div>
+        </div>
         <!--Results-->
         <div class="row">
             <div class="col-md-12" id="results"></div>
@@ -32,4 +49,5 @@
     <!--JavaScript-->
     <script type="text/javascript" src="assets/JavaScript/app.js"></script>
 </body>
+
 </html>
