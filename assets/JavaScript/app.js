@@ -35,7 +35,9 @@ $(document).on("click", "#topic", function () {
             $("#results").append(gifDiv);
            
         }
-
+        //Create and append a p tag
+        var dir = $('<p>').text("Click on a Gif to see it animate (or to stop its animation)!").attr("class", "directions")
+        $("#results").prepend(dir)
         //when an image is clicked...
         $("img").on("click", function () {
             //if the gif's data-state is still...
