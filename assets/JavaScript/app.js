@@ -26,40 +26,33 @@ $(document).on("click", "#topic", function () {
             //...creating an image
             var still = result.data[i].images["fixed_height_still"].url
             var animate = result.data[i].images["fixed_height"].url
-            var image = $("<img>").attr({ "src": still, "data-animate": animate, "data-still": still })
+            var image = $("<img>").attr({ "src": still, "data-animate": animate, "data-still": still, "data-state": "still" })
             //...append the image as well as it's rating
             var rating = $("<p>")
             rating.text("Rating: " + result.data[i].rating.toUpperCase())
             gifDiv.append(image, rating)
             //...appending to the page
             $("#results").append(gifDiv);
-            //...and assigning the gif to be off
-            var on = false;
+           
         }
-        console.log(result);
 
         //when an image is clicked...
         $("img").on("click", function () {
-            //if the gif is off...
-            if (!on) {
+            //if the gif's data-state is still...
+            if ($(this).attr("data-state")==="still") {
                 //..change the source so that it animates
                 $(this).attr("src", $(this).attr("data-animate"))
-                //and turn the gif on
-                on = true
+                //and turn the gif's state to animate
+                $(this).attr("data-state", "animate")
             }
-            //otherwise, the gif is on, so...
+            //otherwise, the gif is animated, so...
             else {
                 //...change the source so that it becomes still
                 $(this).attr("src", $(this).attr("data-still"))
-                //and turn the gif off
-                on = false;
+                //and turn the gif's state to still
+                $(this).attr("data-state", "still")
             }
         })
-
-        
-
-        //issues: if a gif is animated, the next gifs will require a double click to animate if the first gif is still running (if a gif has been paused, pausing the next one will require a double click.)
-
     })
 })
 
